@@ -84,7 +84,7 @@ for cx in acts:
 # ---------------- targeted: rescued-sentence coverage ----------------
 print("scoring TARGETED (rescued-sentence coverage)...", flush=True)
 from sentence_transformers import SentenceTransformer
-_DEVICE = \"mps\" if torch.backends.mps.is_available() else \"cpu\"
+_DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
 sbert = SentenceTransformer("BAAI/bge-small-en-v1.5", device=_DEVICE)
 QP = "Represent this sentence for searching relevant passages: "
 for cx in acts:

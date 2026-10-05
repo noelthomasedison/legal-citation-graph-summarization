@@ -225,6 +225,9 @@ Status: **planning; no summarisation-RAG code has been implemented**.
 Completed:
 
 - Created a standalone snapshot without Phase 2.
+- Repaired three pre-existing escaped-quote syntax errors in the imported Phase
+  3 scripts `02_summary_source_alignment.py`, `06_passage_alignment.py`, and
+  `08_evaluate_summaries.py`. The source repository was not modified.
 - Fixed T5, BART, and PEGASUS as the generator families.
 - Fixed the existing hierarchical summariser as the method to preserve.
 - Identified source-query, summary-query, citation-guided, and hybrid retrieval
@@ -248,6 +251,7 @@ Next decisions:
 | 2026-10-05 | Preserve the current summarisation method | Supervisor requested retrieval be studied without changing the summariser |
 | 2026-10-05 | Do not use HDBSCAN in the current experiment | Avoid changing the summarisation architecture while introducing RAG |
 | 2026-10-05 | Fix T5, BART, and PEGASUS | Supervisor decision and alignment with the published ReguSum study |
+| 2026-10-05 | Repair three imported escaped-quote syntax errors in the new repository only | Make the committed snapshot syntactically usable without altering the source worktree |
 
 Update this file whenever a decision changes the research question, experiment
 matrix, data split, model configuration, or interpretation.

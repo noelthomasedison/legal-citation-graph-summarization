@@ -31,7 +31,7 @@ sys.path.insert(0, str(ROOT.parent / "phase1" / "src"))
 
 import torch  # noqa: E402
 from sentence_transformers import SentenceTransformer   # noqa: E402
-_DEVICE = \"mps\" if torch.backends.mps.is_available() else \"cpu\"
+_DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
 from huggingface_hub import hf_hub_download             # noqa: E402
 from eurlex_ingest import load_eurlexsum                # noqa: E402
 from regkg.textutil import clean                        # noqa: E402
