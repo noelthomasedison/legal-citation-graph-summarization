@@ -192,16 +192,19 @@ and a clearly defined comparison population.
   reusable, audited components.
 - `phase3/` - imported existing EUR-Lex hierarchical summarisation experiment;
   treat as the reference implementation of the summarisation method.
+- `phase 3 RAG summariser/` - the only location for new summarisation-RAG
+  implementation, configurations, scripts, tests, run manifests, and reports.
 - `RAG_SUMMARISER_PLAN.md` - approved architecture, gates, and implementation
   sequence for this project.
 - `SOURCE_PROJECT_README.md` - original source-project README retained for
   provenance.
 - `README.md` - this repository's public overview.
 
-New implementation code should be added under a new top-level
-`summariser_rag/` package after the pipeline plan is approved. Do not rewrite
-the imported `phase3/` implementation in place. Wrap or call it so the baseline
-remains recoverable and testable.
+New implementation code must be added under the top-level
+`phase 3 RAG summariser/` directory. The importable Python package will live at
+`phase 3 RAG summariser/src/summariser_rag/` when implementation begins. Do not
+rewrite the imported `phase3/` implementation in place. Wrap or call it so the
+baseline remains recoverable and testable.
 
 ## 10. Development rules
 
@@ -228,6 +231,7 @@ Completed:
 - Repaired three pre-existing escaped-quote syntax errors in the imported Phase
   3 scripts `02_summary_source_alignment.py`, `06_passage_alignment.py`, and
   `08_evaluate_summaries.py`. The source repository was not modified.
+- Created `phase 3 RAG summariser/` as the dedicated location for all new code.
 - Fixed T5, BART, and PEGASUS as the generator families.
 - Fixed the existing hierarchical summariser as the method to preserve.
 - Identified source-query, summary-query, citation-guided, and hybrid retrieval
@@ -252,6 +256,7 @@ Next decisions:
 | 2026-10-05 | Do not use HDBSCAN in the current experiment | Avoid changing the summarisation architecture while introducing RAG |
 | 2026-10-05 | Fix T5, BART, and PEGASUS | Supervisor decision and alignment with the published ReguSum study |
 | 2026-10-05 | Repair three imported escaped-quote syntax errors in the new repository only | Make the committed snapshot syntactically usable without altering the source worktree |
+| 2026-10-05 | Place all new implementation under `phase 3 RAG summariser/` | Keep the imported Phase 3 baseline unchanged and make the new research code easy to audit |
 
 Update this file whenever a decision changes the research question, experiment
 matrix, data split, model configuration, or interpretation.

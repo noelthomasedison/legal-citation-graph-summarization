@@ -252,7 +252,9 @@ eligible-subset definition must be frozen before examining condition outcomes.
 
 ### WP1 - Create the new package and tests
 
-- Add `summariser_rag/` without modifying imported Phase 3 code.
+- Add the importable package under
+  `phase 3 RAG summariser/src/summariser_rag/` without modifying imported Phase
+  3 code.
 - Add configuration schemas and run manifests.
 - Test split isolation, content hashing, and token accounting.
 
