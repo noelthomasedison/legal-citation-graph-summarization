@@ -1,0 +1,179 @@
+{
+  "schema_version": "llm-summary-judge-v1",
+  "status": "complete",
+  "n_completed": 80,
+  "n_total": 80,
+  "judgements_sha256": "7db20b7c212618135a0cd21b462e89cce6231db4358db201b54f7654ca456517",
+  "evaluation_sha256": "caa4889b8ecfa8603f3968c9e052721c7cf416cf29de41974414089526ecca95",
+  "report_sha256": "c734d717dd77992b013a36a5aeacbe4410becdeec847fe07c98ec56ce5cf391c",
+  "run_config": {
+    "schema_version": "llm-summary-judge-v1",
+    "prompt_version": "legal-user-rubric-v1",
+    "inference": {
+      "gateway": "openrouter",
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "openai/gpt-oss-120b",
+      "endpoint_provider": "coreweave",
+      "quantization": "fp4",
+      "allow_fallbacks": false,
+      "request_options": {
+        "provider": {
+          "only": [
+            "coreweave"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true,
+          "quantizations": [
+            "fp4"
+          ]
+        }
+      }
+    },
+    "request_options": {
+      "provider": {
+        "only": [
+          "coreweave"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "quantizations": [
+          "fp4"
+        ]
+      },
+      "response_format": {
+        "type": "json_schema",
+        "json_schema": {
+          "name": "legal_summary_evaluation",
+          "strict": true,
+          "schema": {
+            "type": "object",
+            "properties": {
+              "evaluations": {
+                "type": "array",
+                "minItems": 4,
+                "maxItems": 4,
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "candidate_id": {
+                      "type": "string",
+                      "enum": [
+                        "S1",
+                        "S2",
+                        "S3",
+                        "S4"
+                      ]
+                    },
+                    "scores": {
+                      "type": "object",
+                      "properties": {
+                        "legal_fidelity": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 5
+                        },
+                        "material_coverage": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 5
+                        },
+                        "legal_salience": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 5
+                        },
+                        "lay_clarity": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 5
+                        },
+                        "practical_understanding": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 5
+                        },
+                        "concision": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 5
+                        }
+                      },
+                      "required": [
+                        "legal_fidelity",
+                        "material_coverage",
+                        "legal_salience",
+                        "lay_clarity",
+                        "practical_understanding",
+                        "concision"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "headline_scores": {
+                      "type": "object",
+                      "properties": {
+                        "user_comparison": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 5
+                        },
+                        "legal_comparison": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 5
+                        }
+                      },
+                      "required": [
+                        "user_comparison",
+                        "legal_comparison"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "material_error": {
+                      "type": "boolean"
+                    },
+                    "material_omission": {
+                      "type": "boolean"
+                    },
+                    "not_confirmed_by_reference": {
+                      "type": "boolean"
+                    },
+                    "rationale": {
+                      "type": "string",
+                      "maxLength": 350
+                    }
+                  },
+                  "required": [
+                    "candidate_id",
+                    "scores",
+                    "headline_scores",
+                    "material_error",
+                    "material_omission",
+                    "not_confirmed_by_reference",
+                    "rationale"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "evaluations"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "reasoning": {
+        "effort": "medium",
+        "exclude": true
+      },
+      "seed": 41
+    },
+    "temperature": 0.0,
+    "max_tokens": 8192,
+    "seed": 41,
+    "summary_sha256": "95dfdbfc86bfafc87c279ea028d55d7a03e0227f7090d167de483e9550d0c40b",
+    "gold_sha256": "4eda506a07280338268e482cc787759e2c8e1bb2d44a4bf2c9ad6b5eab92e0f1"
+  },
+  "run_config_hash": "de9fed6d55cfc9a0a46bf277c4fab1c567eda5e8ffddf260b6f56a501c2dcd05",
+  "updated_at_utc": "2026-08-12T09:44:43.401582+00:00"
+}

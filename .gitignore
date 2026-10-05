@@ -1,0 +1,43 @@
+# Secrets
+.nvidia_api_key
+**/.nvidia_api_key
+.openrouter_api_key
+**/.openrouter_api_key
+.env
+**/.env
+*.key
+
+# Python / Node environments
+**/.venv/
+**/venv/
+**/__pycache__/
+*.pyc
+**/node_modules/
+.DS_Store
+
+# Third-party and regenerable datasets
+phase1/data/raw/
+phase3/data/raw/
+summariser_rag/data/raw/
+
+# Model weights and large caches
+**/models/
+**/*_cache/
+*.npy
+**/*_top100.jsonl
+
+# Experimental scratch outputs
+**/*pilot*
+**/*smoke*
+tmp/
+
+# Local tool configuration
+.claude/
+.codex/
+
+# Presentations and reports live outside the code repository
+*.pptx
+*.pdf
+*.docx
+
+# CLAUDE.md is intentionally tracked in this repository.

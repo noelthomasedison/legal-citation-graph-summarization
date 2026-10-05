@@ -1,0 +1,22 @@
+{
+  "schema_version": "eurlex-audit-v2.2",
+  "seed": 389,
+  "graph": "data/eurlex_edges_v2_2.jsonl",
+  "graph_sha256": "f4b9f0ad7203d986846d408a49a34b20318a63fcd26492d8ba70bbda4c55611e",
+  "uid_version": "v2",
+  "segmentation_version": "region-v2",
+  "population": {
+    "within": 87074,
+    "cross": 10259
+  },
+  "sample": {
+    "within": 50,
+    "cross": 50
+  },
+  "sample_how": {
+    "exact": 88,
+    "exact+nested-point": 2,
+    "relative": 10
+  },
+  "zero_llm_calls": true
+}

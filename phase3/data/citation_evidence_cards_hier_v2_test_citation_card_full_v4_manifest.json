@@ -1,0 +1,127 @@
+{
+  "schema_version": "citation-evidence-v1.0",
+  "created_utc": "2026-08-12T00:28:45.288132+00:00",
+  "git_commit": "3437e58cf703a2b6946698042b5765136ff2760a",
+  "split": "test",
+  "artifact_tag": "citation_card_full_v4",
+  "requests_artifact": "phase3/data/citation_evidence_requests_hier_v2_test_citation_card_full_v4.jsonl",
+  "requests_sha256": "16a1175e997ec55e1b35f0d98899f037d46285bb7063eb8b728dcec4faa69346",
+  "cards_artifact": "data/citation_evidence_cards_hier_v2_test_citation_card_full_v4.jsonl",
+  "cards_sha256": "3c4d292eea9803cd9363dd74200ec63796a411aec29eae880f2dd17a7d34ce60",
+  "n_selected_requests": 789,
+  "selected_request_ids_sha256": "419f1ee90b624f94a9abf8a1df080b0c9153d425567db5fc4aa48dcad540eace",
+  "n_completed_records": 789,
+  "status_counts": {
+    "rejected_by_judge": 120,
+    "supported": 358,
+    "insufficient_evidence": 309,
+    "not_needed": 1,
+    "need_validation_error": 1
+  },
+  "usable_supported_cards": 358,
+  "models": {
+    "need_and_extraction": "meta-llama/llama-3.3-70b-instruct",
+    "support_judge": "meta-llama/llama-3.3-70b-instruct"
+  },
+  "inference": {
+    "need_and_extraction": {
+      "gateway": "openrouter",
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "endpoint_provider": "coreweave",
+      "quantization": "fp16",
+      "allow_fallbacks": false,
+      "request_options": {
+        "provider": {
+          "only": [
+            "coreweave"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true,
+          "quantizations": [
+            "fp16"
+          ]
+        }
+      }
+    },
+    "support_judge": {
+      "gateway": "openrouter",
+      "base_url": "https://openrouter.ai/api/v1",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "endpoint_provider": "coreweave",
+      "quantization": "fp16",
+      "allow_fallbacks": false,
+      "request_options": {
+        "provider": {
+          "only": [
+            "coreweave"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true,
+          "quantizations": [
+            "fp16"
+          ]
+        }
+      }
+    }
+  },
+  "request_options": {
+    "need_and_extraction": {
+      "provider": {
+        "only": [
+          "coreweave"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "quantizations": [
+          "fp16"
+        ]
+      },
+      "response_format": {
+        "type": "json_object"
+      }
+    },
+    "support_judge": {
+      "provider": {
+        "only": [
+          "coreweave"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "quantizations": [
+          "fp16"
+        ]
+      },
+      "response_format": {
+        "type": "json_object"
+      }
+    }
+  },
+  "prompt_versions": {
+    "need": "citation-need-v1.3",
+    "extraction": "citation-extract-v1.6",
+    "judge": "citation-judge-v1.4"
+  },
+  "settings": {
+    "temperature": 0.0,
+    "judge_temperature": 0.0,
+    "judge_top_p": null,
+    "judge_enable_thinking": null,
+    "need_max_tokens": 192,
+    "extract_max_tokens": 320,
+    "judge_max_tokens": 160
+  },
+  "new_rows": 789,
+  "workers": 1,
+  "launch_rpm": 20.0,
+  "new_calls": {
+    "extractor": 1288,
+    "judge": 394
+  },
+  "cache_hits": {
+    "extractor": 261,
+    "judge": 84
+  },
+  "elapsed_s": 5229.5,
+  "gold_summary_loaded": false
+}

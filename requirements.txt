@@ -1,0 +1,10 @@
+# Python deps (Python 3.11+; developed on 3.14, macOS/MPS).
+# Create the env:  python -m venv phase1/.venv && phase1/.venv/bin/pip install -r requirements.txt
+numpy
+torch
+transformers
+sentence-transformers
+rank-bm25
+scikit-learn
+pytest
+# Document/deck generation is Node-based (see deck_build/): npm install docx pptxgenjs sharp

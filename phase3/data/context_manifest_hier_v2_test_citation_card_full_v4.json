@@ -1,0 +1,209 @@
+{
+  "schema_version": "hier-v2.1",
+  "created_utc": "2026-08-12T01:05:04.295083+00:00",
+  "dataset": "dennlinger/eur-lex-sum",
+  "split": "test",
+  "seed": 41,
+  "n_acts": 80,
+  "parameters": {
+    "split": "test",
+    "n": 80,
+    "act_list": null,
+    "seed": 41,
+    "n_groups": 4,
+    "group_input_tokens": 1800,
+    "frontier": 50,
+    "max_within": 4,
+    "max_cross": 4,
+    "tokenizer": "meta-llama/Llama-3.3-70B-Instruct",
+    "dry_run": true,
+    "allow_approximate_tokenizer": false,
+    "min_b_treated": 30,
+    "allow_underpowered": false,
+    "threshold": 0.6,
+    "budget_tolerance_pct": 1.0,
+    "device": "auto",
+    "graph_tag": "v2_3",
+    "segmentation_version": "region-v2",
+    "artifact_tag": "citation_card_full_v4",
+    "citation_evidence_cards": "phase3/data/citation_evidence_cards_hier_v2_test_citation_card_full_v4.jsonl",
+    "prepare_citation_cards": false
+  },
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "embedding_device": "cpu",
+  "tokenizer": {
+    "tokenizer_mode": "exact",
+    "valid_for_generation": true,
+    "repository": "meta-llama/Llama-3.3-70B-Instruct",
+    "resolved_revision": null,
+    "tokenizer_class": "TokenizersBackend",
+    "counting_adapter_version": "hf-chat-template-input-ids-v2",
+    "vocab_size": 128000,
+    "configuration_sha256": "76e2b86d66dfaec6b1544d3b11ae17f198b6dbd13fb22569328e8c4a39e2367b",
+    "vocabulary_sha256": "b47fcb7017102fb3594326d69acc6b74872032ed15def90890d49d61ea94d220",
+    "counter_probe": {
+      "content_tokens": 138,
+      "complete_chat_tokens": 173,
+      "passed": true
+    }
+  },
+  "approximate_structural_audit": false,
+  "valid_for_generation": true,
+  "zero_llm_calls": true,
+  "evidence_representation": "citation_card",
+  "citation_evidence": {
+    "request_artifact": "data/citation_evidence_requests_hier_v2_test_citation_card_full_v4.jsonl",
+    "request_sha256": "16a1175e997ec55e1b35f0d98899f037d46285bb7063eb8b728dcec4faa69346",
+    "n_requests": 789,
+    "cards_artifact": "/Users/noelthomasedison/Desktop/MSC Research/Research code base/phase3/data/citation_evidence_cards_hier_v2_test_citation_card_full_v4.jsonl",
+    "cards_sha256": "3c4d292eea9803cd9363dd74200ec63796a411aec29eae880f2dd17a7d34ce60",
+    "cards_manifest": {
+      "schema_version": "citation-evidence-v1.0",
+      "created_utc": "2026-08-12T00:28:45.288132+00:00",
+      "git_commit": "3437e58cf703a2b6946698042b5765136ff2760a",
+      "split": "test",
+      "artifact_tag": "citation_card_full_v4",
+      "requests_artifact": "phase3/data/citation_evidence_requests_hier_v2_test_citation_card_full_v4.jsonl",
+      "requests_sha256": "16a1175e997ec55e1b35f0d98899f037d46285bb7063eb8b728dcec4faa69346",
+      "cards_artifact": "data/citation_evidence_cards_hier_v2_test_citation_card_full_v4.jsonl",
+      "cards_sha256": "3c4d292eea9803cd9363dd74200ec63796a411aec29eae880f2dd17a7d34ce60",
+      "n_selected_requests": 789,
+      "selected_request_ids_sha256": "419f1ee90b624f94a9abf8a1df080b0c9153d425567db5fc4aa48dcad540eace",
+      "n_completed_records": 789,
+      "status_counts": {
+        "rejected_by_judge": 120,
+        "supported": 358,
+        "insufficient_evidence": 309,
+        "not_needed": 1,
+        "need_validation_error": 1
+      },
+      "usable_supported_cards": 358,
+      "models": {
+        "need_and_extraction": "meta-llama/llama-3.3-70b-instruct",
+        "support_judge": "meta-llama/llama-3.3-70b-instruct"
+      },
+      "inference": {
+        "need_and_extraction": {
+          "gateway": "openrouter",
+          "base_url": "https://openrouter.ai/api/v1",
+          "model": "meta-llama/llama-3.3-70b-instruct",
+          "endpoint_provider": "coreweave",
+          "quantization": "fp16",
+          "allow_fallbacks": false,
+          "request_options": {
+            "provider": {
+              "only": [
+                "coreweave"
+              ],
+              "allow_fallbacks": false,
+              "require_parameters": true,
+              "quantizations": [
+                "fp16"
+              ]
+            }
+          }
+        },
+        "support_judge": {
+          "gateway": "openrouter",
+          "base_url": "https://openrouter.ai/api/v1",
+          "model": "meta-llama/llama-3.3-70b-instruct",
+          "endpoint_provider": "coreweave",
+          "quantization": "fp16",
+          "allow_fallbacks": false,
+          "request_options": {
+            "provider": {
+              "only": [
+                "coreweave"
+              ],
+              "allow_fallbacks": false,
+              "require_parameters": true,
+              "quantizations": [
+                "fp16"
+              ]
+            }
+          }
+        }
+      },
+      "request_options": {
+        "need_and_extraction": {
+          "provider": {
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false,
+            "require_parameters": true,
+            "quantizations": [
+              "fp16"
+            ]
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "support_judge": {
+          "provider": {
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false,
+            "require_parameters": true,
+            "quantizations": [
+              "fp16"
+            ]
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        }
+      },
+      "prompt_versions": {
+        "need": "citation-need-v1.3",
+        "extraction": "citation-extract-v1.6",
+        "judge": "citation-judge-v1.4"
+      },
+      "settings": {
+        "temperature": 0.0,
+        "judge_temperature": 0.0,
+        "judge_top_p": null,
+        "judge_enable_thinking": null,
+        "need_max_tokens": 192,
+        "extract_max_tokens": 320,
+        "judge_max_tokens": 160
+      },
+      "new_rows": 789,
+      "workers": 1,
+      "launch_rpm": 20.0,
+      "new_calls": {
+        "extractor": 1288,
+        "judge": 394
+      },
+      "cache_hits": {
+        "extractor": 261,
+        "judge": 84
+      },
+      "elapsed_s": 5229.5,
+      "gold_summary_loaded": false
+    },
+    "missing_card_records": 0,
+    "usable_cards": 358
+  },
+  "power_gate": {
+    "minimum_b_treated": 30,
+    "balanced_b_treated": 33,
+    "passed": true,
+    "underpowered_pilot_override": false
+  },
+  "budget_validation": {
+    "per_group_prompt_cap": 1800,
+    "over_budget_acts": [],
+    "treatment_longer_than_comparator_acts": [],
+    "surviving_duplicate_count": 0,
+    "surviving_overlap_count": 0,
+    "problems": []
+  },
+  "graph_sha256": "dd20dbfe073eb544f5211aa95771a9a73a1b45f50355a8c7776ad8c68895b178",
+  "graph_artifact": "data/eurlex_edges_v2_3.jsonl",
+  "context_sha256": "a781a73c431a5e51a53a92c8eb1cc6d58affad00da9647c4dd500d4b36219a24",
+  "audit_sha256": "03e5637518357afd167d915d9fa6088b86c89ebe3836d7a4dc1a5b9a622c58ec",
+  "report_sha256": "bf49d5e1c95ae3b99f5f7ae5f632be4ff0fb3cc58d6910557bae790eb63fbd48"
+}

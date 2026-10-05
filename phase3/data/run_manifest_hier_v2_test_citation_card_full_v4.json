@@ -1,0 +1,306 @@
+{
+  "git_commit": "3437e58cf703a2b6946698042b5765136ff2760a",
+  "utc": "2026-08-12T02:05:38.500360+00:00",
+  "dataset": "dennlinger/eur-lex-sum",
+  "split": "test",
+  "n_acts": 80,
+  "celex_ids": [
+    "32007R1371",
+    "32007R1394",
+    "32008R0452",
+    "32008R0762",
+    "32008R0763",
+    "32009R1071",
+    "32009R1107",
+    "32009R1185",
+    "32010R0066",
+    "32010R0913",
+    "32010R1236",
+    "32011R0181",
+    "32011R1007",
+    "32011R1173",
+    "32011R1343",
+    "32012R0070",
+    "32012R0386",
+    "32012R0530",
+    "32012R1151",
+    "32013R0229",
+    "32013R0347",
+    "32013R0603",
+    "32013R0608",
+    "32013R1260",
+    "32013R1305",
+    "32014R0513",
+    "32014R0514",
+    "32014R0516",
+    "32014R0537",
+    "32014R0654",
+    "32014R0656",
+    "32014R0909",
+    "32015R0848",
+    "32016R0424",
+    "32016R0679",
+    "32016R0794",
+    "32016R1035",
+    "32016R1036",
+    "32016R1627",
+    "32017R1369",
+    "32018L0958",
+    "32018L2001",
+    "32018R0974",
+    "32018R1672",
+    "32018R1727",
+    "32018R1806",
+    "32019L0520",
+    "32019L0789",
+    "32019L1158",
+    "32019R0026",
+    "32019R0515",
+    "32019R0516",
+    "32019R0517",
+    "32019R0817",
+    "32019R0881",
+    "32019R1020",
+    "32019R1157",
+    "32019R1240",
+    "32020D0472",
+    "32020D1515",
+    "32020D2228",
+    "32020R0123",
+    "32020R0672",
+    "32020R2094",
+    "32021D0820",
+    "32021Q0611(01)",
+    "32021R0240",
+    "32021R0522",
+    "32021R0523",
+    "32021R0690",
+    "32021R0694",
+    "32021R0696",
+    "32021R0782",
+    "32021R0784",
+    "32021R0947",
+    "32021R1057",
+    "32021R1077",
+    "32021R1147",
+    "32021R1153",
+    "32021R1529"
+  ],
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "prompt_version": "hier-v2.1-citation-cards",
+  "inference": {
+    "gateway": "openrouter",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "meta-llama/llama-3.3-70b-instruct",
+    "endpoint_provider": "coreweave",
+    "quantization": "fp16",
+    "allow_fallbacks": false,
+    "request_options": {
+      "provider": {
+        "only": [
+          "coreweave"
+        ],
+        "allow_fallbacks": false,
+        "require_parameters": true,
+        "quantizations": [
+          "fp16"
+        ]
+      }
+    }
+  },
+  "generation_settings_hash": "b4d6a58b1d64ce532e0b06a6a10bc20384f2b60fd26a1d5a37a9f5304fdc3d52",
+  "prompt_sha256": {
+    "stage1_system": "97253122418a33480ea120c176d044cfcde43371e00817930f0cc740747b042c",
+    "stage2_system": "58ecac2e37341f089723d36d148b95493e0ef58e4f19a1842a87516e3f53ce89"
+  },
+  "cli": {
+    "split": "test",
+    "n": 80,
+    "act_list": null,
+    "conditions": "base,A,B,oracle",
+    "stage1_max_tokens": 256,
+    "final_max_tokens": 1024,
+    "temperature": 0.0,
+    "provider": "openrouter",
+    "model": "meta-llama/llama-3.3-70b-instruct",
+    "endpoint_provider": "coreweave",
+    "quantization": "fp16",
+    "allow_provider_fallbacks": false,
+    "dry_run": false,
+    "artifact_tag": "citation_card_full_v4",
+    "workers": 1,
+    "rpm": 20.0
+  },
+  "hashes": {
+    "contexts": "a781a73c431a5e51a53a92c8eb1cc6d58affad00da9647c4dd500d4b36219a24",
+    "graph": "dd20dbfe073eb544f5211aa95771a9a73a1b45f50355a8c7776ad8c68895b178",
+    "citation_cards": "3c4d292eea9803cd9363dd74200ec63796a411aec29eae880f2dd17a7d34ce60"
+  },
+  "graph_artifact": "data/eurlex_edges_v2_3.jsonl",
+  "context_tokenizer": {
+    "tokenizer_mode": "exact",
+    "valid_for_generation": true,
+    "repository": "meta-llama/Llama-3.3-70B-Instruct",
+    "resolved_revision": null,
+    "tokenizer_class": "TokenizersBackend",
+    "counting_adapter_version": "hf-chat-template-input-ids-v2",
+    "vocab_size": 128000,
+    "configuration_sha256": "76e2b86d66dfaec6b1544d3b11ae17f198b6dbd13fb22569328e8c4a39e2367b",
+    "vocabulary_sha256": "b47fcb7017102fb3594326d69acc6b74872032ed15def90890d49d61ea94d220",
+    "counter_probe": {
+      "content_tokens": 138,
+      "complete_chat_tokens": 173,
+      "passed": true
+    }
+  },
+  "context_manifest": "context_manifest_hier_v2_test_citation_card_full_v4.json",
+  "citation_evidence": {
+    "request_artifact": "data/citation_evidence_requests_hier_v2_test_citation_card_full_v4.jsonl",
+    "request_sha256": "16a1175e997ec55e1b35f0d98899f037d46285bb7063eb8b728dcec4faa69346",
+    "n_requests": 789,
+    "cards_artifact": "/Users/noelthomasedison/Desktop/MSC Research/Research code base/phase3/data/citation_evidence_cards_hier_v2_test_citation_card_full_v4.jsonl",
+    "cards_sha256": "3c4d292eea9803cd9363dd74200ec63796a411aec29eae880f2dd17a7d34ce60",
+    "cards_manifest": {
+      "schema_version": "citation-evidence-v1.0",
+      "created_utc": "2026-08-12T00:28:45.288132+00:00",
+      "git_commit": "3437e58cf703a2b6946698042b5765136ff2760a",
+      "split": "test",
+      "artifact_tag": "citation_card_full_v4",
+      "requests_artifact": "phase3/data/citation_evidence_requests_hier_v2_test_citation_card_full_v4.jsonl",
+      "requests_sha256": "16a1175e997ec55e1b35f0d98899f037d46285bb7063eb8b728dcec4faa69346",
+      "cards_artifact": "data/citation_evidence_cards_hier_v2_test_citation_card_full_v4.jsonl",
+      "cards_sha256": "3c4d292eea9803cd9363dd74200ec63796a411aec29eae880f2dd17a7d34ce60",
+      "n_selected_requests": 789,
+      "selected_request_ids_sha256": "419f1ee90b624f94a9abf8a1df080b0c9153d425567db5fc4aa48dcad540eace",
+      "n_completed_records": 789,
+      "status_counts": {
+        "rejected_by_judge": 120,
+        "supported": 358,
+        "insufficient_evidence": 309,
+        "not_needed": 1,
+        "need_validation_error": 1
+      },
+      "usable_supported_cards": 358,
+      "models": {
+        "need_and_extraction": "meta-llama/llama-3.3-70b-instruct",
+        "support_judge": "meta-llama/llama-3.3-70b-instruct"
+      },
+      "inference": {
+        "need_and_extraction": {
+          "gateway": "openrouter",
+          "base_url": "https://openrouter.ai/api/v1",
+          "model": "meta-llama/llama-3.3-70b-instruct",
+          "endpoint_provider": "coreweave",
+          "quantization": "fp16",
+          "allow_fallbacks": false,
+          "request_options": {
+            "provider": {
+              "only": [
+                "coreweave"
+              ],
+              "allow_fallbacks": false,
+              "require_parameters": true,
+              "quantizations": [
+                "fp16"
+              ]
+            }
+          }
+        },
+        "support_judge": {
+          "gateway": "openrouter",
+          "base_url": "https://openrouter.ai/api/v1",
+          "model": "meta-llama/llama-3.3-70b-instruct",
+          "endpoint_provider": "coreweave",
+          "quantization": "fp16",
+          "allow_fallbacks": false,
+          "request_options": {
+            "provider": {
+              "only": [
+                "coreweave"
+              ],
+              "allow_fallbacks": false,
+              "require_parameters": true,
+              "quantizations": [
+                "fp16"
+              ]
+            }
+          }
+        }
+      },
+      "request_options": {
+        "need_and_extraction": {
+          "provider": {
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false,
+            "require_parameters": true,
+            "quantizations": [
+              "fp16"
+            ]
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        },
+        "support_judge": {
+          "provider": {
+            "only": [
+              "coreweave"
+            ],
+            "allow_fallbacks": false,
+            "require_parameters": true,
+            "quantizations": [
+              "fp16"
+            ]
+          },
+          "response_format": {
+            "type": "json_object"
+          }
+        }
+      },
+      "prompt_versions": {
+        "need": "citation-need-v1.3",
+        "extraction": "citation-extract-v1.6",
+        "judge": "citation-judge-v1.4"
+      },
+      "settings": {
+        "temperature": 0.0,
+        "judge_temperature": 0.0,
+        "judge_top_p": null,
+        "judge_enable_thinking": null,
+        "need_max_tokens": 192,
+        "extract_max_tokens": 320,
+        "judge_max_tokens": 160
+      },
+      "new_rows": 789,
+      "workers": 1,
+      "launch_rpm": 20.0,
+      "new_calls": {
+        "extractor": 1288,
+        "judge": 394
+      },
+      "cache_hits": {
+        "extractor": 261,
+        "judge": 84
+      },
+      "elapsed_s": 5229.5,
+      "gold_summary_loaded": false
+    },
+    "missing_card_records": 0,
+    "usable_cards": 358
+  },
+  "packages": {
+    "transformers": "5.14.1",
+    "sentence_transformers": "5.6.0",
+    "numpy": "2.5.1",
+    "python": "3.14.3"
+  },
+  "dry_run": false,
+  "llm_calls_made": 808,
+  "cache_hits": 792,
+  "rows_reused": 0,
+  "elapsed_s": 3604.1,
+  "workers": 1,
+  "launch_rpm": 20.0
+}
